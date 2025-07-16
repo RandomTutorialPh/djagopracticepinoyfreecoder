@@ -1,0 +1,13 @@
+Creating Env - python -m venv myenv
+Running env - myenv\Scripts\activate
+Deactivate env - deactivate
+
+Exporting dependencies -pip freeze > requirements.txt
+Reinstalling dependencies to other computer - pip install -r requirements.txt
+
+install django - pip install django
+install mysqlclient - pip install mysqlclient
+
+creating first project on django - django-admin startproject (nameofproject) .
+Run python project - python manage.py runser
+Run python project thru hotspot or wifi - get first the ipv4 of your wifi. go to your django project - settings.py - on ALLOWED_HOSTS = [] add your ipv4. run this command "python manage.py runserver 192.168.56.1:8000" 
