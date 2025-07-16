@@ -11,3 +11,13 @@ install mysqlclient - pip install mysqlclient
 creating first project on django - django-admin startproject (nameofproject) .
 Run python project - python manage.py runser
 Run python project thru hotspot or wifi - get first the ipv4 of your wifi. go to your django project - settings.py - on ALLOWED_HOSTS = [] add your ipv4. run this command "python manage.py runserver 192.168.56.1:8000" 
+
+Git Guide
+git push origin master --force - remove the current files on repo and upload the new files.
+
+git init                            # Initialize a git repo (if not done yet)
+git add .                           # Add all files
+git commit -m "Initial commit"      # Commit the files
+git branch -M main                  # Rename default branch to main
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git push -u origin main             # Push to GitHub
