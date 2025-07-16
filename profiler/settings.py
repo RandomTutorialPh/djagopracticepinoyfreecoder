@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a9+etas%vfrc&gh+jlwtw2&_kx!9sf6fym7^yzbglx83ve(4(v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.56.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -73,13 +73,24 @@ WSGI_APPLICATION = 'profiler.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
+    # Default database of django
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # } 
+
+    # EXTERNAL DATABASE USING MYSQL
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'profilerapp',
+        'USERNAME': 'root',
+        'PASSWORD': '',
+        'PORT': '3306',
+        'HOST': 'localhost'
     }
 }
 
-
+  
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
